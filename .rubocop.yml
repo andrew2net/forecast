@@ -1,0 +1,10 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'spec/**/*'
+Style/StringLiterals: 
+  EnforcedStyle: double_quotes
+  Enabled: true

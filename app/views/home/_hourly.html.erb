@@ -1,0 +1,12 @@
+<table class="table caption-top">
+  <caption>Hourly forecast</caption>
+  <thead>
+    <tr>
+      <th scope="col">Time</th>
+      <th scope="col">Temperature F</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "hour", collection: hourly %>
+  </tbody>
+</table>

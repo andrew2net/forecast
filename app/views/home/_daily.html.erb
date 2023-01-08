@@ -1,0 +1,13 @@
+<table class="table caption-top">
+  <caption>Daily forecast</caption>
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Temperature F max</th>
+      <th scope="col">Temperature F min</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "day", collection: daily %>
+  </tbody>
+</table>

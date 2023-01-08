@@ -1,0 +1,31 @@
+<%= turbo_frame_tag "forecast" do %>
+  <% if @forecast[:error] %>
+    <div class="col">
+      <p><%= @forecast[:error] %></p>
+    </div>
+  <% else %>
+    <div class="row">
+      <div class="col-md-3"><h5>Found location:</h5></div>
+      <div class="col"><%= @forecast[:address] %></div>
+      <div class="col">Cached: <%= @forecast[:cached] %></div>
+    </div>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="hourly-tab" data-bs-toggle="tab" data-bs-target="#hourly" type="button" role="tab" aria-controls="hourly" aria-selected="true">Hourly</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="daily-tab" data-bs-toggle="tab" data-bs-target="#daily" type="button" role="tab" aria-controls="daily" aria-selected="false">Dayly max/min</button>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="hourly" role="tabpanel" aria-labelledby="hourly-tab" tabindex="0">
+        <%= render partial: "hourly", object: @forecast[:hourly] %>
+      </div>
+      <div class="tab-pane" id="daily" role="tabpanel" aria-labelledby="daily-tab" tabindex="0">
+        <%= render partial: "daily", object: @forecast[:daily] %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

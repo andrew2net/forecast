@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Forecast</h1>
+  <h2>Search for a location</h2>
+  <%= form_tag "/forecast", method: :get, data: { turbo_frame: "forecast"} do %>
+    <div class="input-group mb-3">
+      <%= text_field_tag :address, "", class: "form-control", placeholder: "City or Zip code" %>
+      <%= submit_tag "Search", class: "btn btn-outline-secondary" %>
+    </div>
+  <% end %>
+
+  <%= turbo_frame_tag "forecast" do %>
+  <% end %>
+</div>

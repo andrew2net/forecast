@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://geocoding-api.open-meteo.com/v1/search?name=New%20York
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - geocoding-api.open-meteo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 06 Jan 2023 23:04:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1287'
+      Connection:
+      - keep-alive
+      X-Encoding-Time:
+      - 0.006103515625 ms
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"id":5128581,"name":"New York","latitude":40.71427,"longitude":-74.00597,"elevation":10.0,"feature_code":"PPL","country_code":"US","admin1_id":5128638,"timezone":"America/New_York","population":8175133,"postcodes":["10001","10002","10003","10004","10005","10006","10007","10008","10009","10010","10011","10012","10013","10014","10016","10017","10018","10019","10020","10021","10022","10023","10024","10025","10026","10027","10028","10029","10030","10031","10032","10033","10034","10035","10036","10037","10038","10039","10040","10041","10043","10044","10045","10055","10060","10065","10069","10080","10081","10087","10090","10101","10102","10103","10104","10105","10106","10107","10108","10109","10110","10111","10112","10113","10114","10115","10116","10117","10118","10119","10120","10121","10122","10123","10124","10125","10126","10128","10129","10130","10131","10132","10133","10138","10150","10151","10152","10153","10154","10155","10156","10157","10158","10159","10160","10161","10162","10163","10164","10165","10166","10167","10168","10169","10170","10171","10172","10173","10174","10175","10176","10177","10178","10179","10185","10199","10203","10211","10212","10213","10242","10249","10256","10258","10259","10260","10261","10265","10268","10269","10270","10271","10272","10273","10274","10275","10276","10277","10278","10279","10280","10281","10282","10285","10286"],"country_id":6252001,"country":"United
+        States","admin1":"New York"},{"id":5082331,"name":"York","latitude":40.86807,"longitude":-97.592,"elevation":488.0,"feature_code":"PPLA2","country_code":"US","admin1_id":5073708,"admin2_id":5082335,"admin3_id":7317456,"timezone":"America/Chicago","population":7864,"postcodes":["68467"],"country_id":6252001,"country":"United
+        States","admin1":"Nebraska","admin2":"York","admin3":"City of York"},{"id":5248969,"name":"Clinton","latitude":42.55779,"longitude":-88.86511,"elevation":293.0,"feature_code":"PPL","country_code":"US","admin1_id":5279468,"admin2_id":5269209,"admin3_id":5248984,"timezone":"America/Chicago","population":2140,"postcodes":["53525"],"country_id":6252001,"country":"United
+        States","admin1":"Wisconsin","admin2":"Rock","admin3":"Village of Clinton"},{"id":4257559,"name":"Florence","latitude":38.78423,"longitude":-84.92439,"elevation":145.0,"feature_code":"PPL","country_code":"US","admin1_id":4921868,"admin2_id":4265618,"admin3_id":4267282,"timezone":"America/Indiana/Vevay","population":80,"postcodes":["47020"],"country_id":6252001,"country":"United
+        States","admin1":"Indiana","admin2":"Switzerland","admin3":"York Township"},{"id":2641508,"name":"New
+        York","latitude":53.07897,"longitude":-0.14008,"elevation":7.0,"feature_code":"PPL","country_code":"GB","admin1_id":6269131,"admin3_id":7290589,"admin4_id":7298672,"timezone":"Europe/London","country_id":2635167,"country":"United
+        Kingdom","admin1":"England","admin3":"East Lindsey District","admin4":"Wildmore"},{"id":3489274,"name":"New
+        York","latitude":18.25,"longitude":-77.18333,"elevation":579.0,"feature_code":"PPL","country_code":"JM","admin1_id":3488715,"admin2_id":11495178,"timezone":"America/Jamaica","country_id":3489940,"country":"Jamaica","admin1":"Parish
+        of Saint Ann","admin2":"Moneague"},{"id":3489275,"name":"New York","latitude":18.11667,"longitude":-77.13333,"elevation":438.0,"feature_code":"PPL","country_code":"JM","admin1_id":3488711,"admin2_id":11495047,"timezone":"America/Jamaica","country_id":3489940,"country":"Jamaica","admin1":"Saint
+        Catherine","admin2":"Ewarton"},{"id":4049286,"name":"New York","latitude":39.68529,"longitude":-93.92688,"elevation":244.0,"feature_code":"PPL","country_code":"US","admin1_id":4398678,"admin2_id":4379520,"admin3_id":4400518,"timezone":"America/Chicago","country_id":6252001,"country":"United
+        States","admin1":"Missouri","admin2":"Caldwell","admin3":"New York Township"},{"id":4165941,"name":"New
+        York","latitude":30.83852,"longitude":-87.2008,"elevation":70.0,"feature_code":"PPL","country_code":"US","admin1_id":4155751,"admin2_id":4172096,"timezone":"America/Chicago","country_id":6252001,"country":"United
+        States","admin1":"Florida","admin2":"Santa Rosa"},{"id":4302486,"name":"New
+        York","latitude":36.98894,"longitude":-88.95256,"elevation":140.0,"feature_code":"PPL","country_code":"US","admin1_id":6254925,"admin2_id":4283067,"timezone":"America/Chicago","country_id":6252001,"country":"United
+        States","admin1":"Kentucky","admin2":"Ballard"}],"generationtime_ms":0.928998}'
+  recorded_at: Fri, 06 Jan 2023 23:04:10 GMT
+- request:
+    method: get
+    uri: https://api.open-meteo.com/v1/forecast?daily=temperature_2m_max,temperature_2m_min&hourly=temperature_2m&latitude=40.71427&longitude=-74.00597&temperature_unit=fahrenheit&timezone=America/New_York
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.open-meteo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 06 Jan 2023 23:04:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYXRpdHVkZSI6NDAuNzEwMzM1LCJsb25naXR1ZGUiOi03My45OTMwNywiZ2VuZXJhdGlvbnRpbWVfbXMiOjAuMzg2OTUzMzUzODgxODM1OTQsInV0Y19vZmZzZXRfc2Vjb25kcyI6LTE4MDAwLCJ0aW1lem9uZSI6IkFtZXJpY2EvTmV3X1lvcmsiLCJ0aW1lem9uZV9hYmJyZXZpYXRpb24iOiJFU1QiLCJlbGV2YXRpb24iOjUxLjAsImhvdXJseV91bml0cyI6eyJ0aW1lIjoiaXNvODYwMSIsInRlbXBlcmF0dXJlXzJtIjoiwrBGIn0sImhvdXJseSI6eyJ0aW1lIjpbIjIwMjMtMDEtMDZUMDA6MDAiLCIyMDIzLTAxLTA2VDAxOjAwIiwiMjAyMy0wMS0wNlQwMjowMCIsIjIwMjMtMDEtMDZUMDM6MDAiLCIyMDIzLTAxLTA2VDA0OjAwIiwiMjAyMy0wMS0wNlQwNTowMCIsIjIwMjMtMDEtMDZUMDY6MDAiLCIyMDIzLTAxLTA2VDA3OjAwIiwiMjAyMy0wMS0wNlQwODowMCIsIjIwMjMtMDEtMDZUMDk6MDAiLCIyMDIzLTAxLTA2VDEwOjAwIiwiMjAyMy0wMS0wNlQxMTowMCIsIjIwMjMtMDEtMDZUMTI6MDAiLCIyMDIzLTAxLTA2VDEzOjAwIiwiMjAyMy0wMS0wNlQxNDowMCIsIjIwMjMtMDEtMDZUMTU6MDAiLCIyMDIzLTAxLTA2VDE2OjAwIiwiMjAyMy0wMS0wNlQxNzowMCIsIjIwMjMtMDEtMDZUMTg6MDAiLCIyMDIzLTAxLTA2VDE5OjAwIiwiMjAyMy0wMS0wNlQyMDowMCIsIjIwMjMtMDEtMDZUMjE6MDAiLCIyMDIzLTAxLTA2VDIyOjAwIiwiMjAyMy0wMS0wNlQyMzowMCIsIjIwMjMtMDEtMDdUMDA6MDAiLCIyMDIzLTAxLTA3VDAxOjAwIiwiMjAyMy0wMS0wN1QwMjowMCIsIjIwMjMtMDEtMDdUMDM6MDAiLCIyMDIzLTAxLTA3VDA0OjAwIiwiMjAyMy0wMS0wN1QwNTowMCIsIjIwMjMtMDEtMDdUMDY6MDAiLCIyMDIzLTAxLTA3VDA3OjAwIiwiMjAyMy0wMS0wN1QwODowMCIsIjIwMjMtMDEtMDdUMDk6MDAiLCIyMDIzLTAxLTA3VDEwOjAwIiwiMjAyMy0wMS0wN1QxMTowMCIsIjIwMjMtMDEtMDdUMTI6MDAiLCIyMDIzLTAxLTA3VDEzOjAwIiwiMjAyMy0wMS0wN1QxNDowMCIsIjIwMjMtMDEtMDdUMTU6MDAiLCIyMDIzLTAxLTA3VDE2OjAwIiwiMjAyMy0wMS0wN1QxNzowMCIsIjIwMjMtMDEtMDdUMTg6MDAiLCIyMDIzLTAxLTA3VDE5OjAwIiwiMjAyMy0wMS0wN1QyMDowMCIsIjIwMjMtMDEtMDdUMjE6MDAiLCIyMDIzLTAxLTA3VDIyOjAwIiwiMjAyMy0wMS0wN1QyMzowMCIsIjIwMjMtMDEtMDhUMDA6MDAiLCIyMDIzLTAxLTA4VDAxOjAwIiwiMjAyMy0wMS0wOFQwMjowMCIsIjIwMjMtMDEtMDhUMDM6MDAiLCIyMDIzLTAxLTA4VDA0OjAwIiwiMjAyMy0wMS0wOFQwNTowMCIsIjIwMjMtMDEtMDhUMDY6MDAiLCIyMDIzLTAxLTA4VDA3OjAwIiwiMjAyMy0wMS0wOFQwODowMCIsIjIwMjMtMDEtMDhUMDk6MDAiLCIyMDIzLTAxLTA4VDEwOjAwIiwiMjAyMy0wMS0wOFQxMTowMCIsIjIwMjMtMDEtMDhUMTI6MDAiLCIyMDIzLTAxLTA4VDEzOjAwIiwiMjAyMy0wMS0wOFQxNDowMCIsIjIwMjMtMDEtMDhUMTU6MDAiLCIyMDIzLTAxLTA4VDE2OjAwIiwiMjAyMy0wMS0wOFQxNzowMCIsIjIwMjMtMDEtMDhUMTg6MDAiLCIyMDIzLTAxLTA4VDE5OjAwIiwiMjAyMy0wMS0wOFQyMDowMCIsIjIwMjMtMDEtMDhUMjE6MDAiLCIyMDIzLTAxLTA4VDIyOjAwIiwiMjAyMy0wMS0wOFQyMzowMCIsIjIwMjMtMDEtMDlUMDA6MDAiLCIyMDIzLTAxLTA5VDAxOjAwIiwiMjAyMy0wMS0wOVQwMjowMCIsIjIwMjMtMDEtMDlUMDM6MDAiLCIyMDIzLTAxLTA5VDA0OjAwIiwiMjAyMy0wMS0wOVQwNTowMCIsIjIwMjMtMDEtMDlUMDY6MDAiLCIyMDIzLTAxLTA5VDA3OjAwIiwiMjAyMy0wMS0wOVQwODowMCIsIjIwMjMtMDEtMDlUMDk6MDAiLCIyMDIzLTAxLTA5VDEwOjAwIiwiMjAyMy0wMS0wOVQxMTowMCIsIjIwMjMtMDEtMDlUMTI6MDAiLCIyMDIzLTAxLTA5VDEzOjAwIiwiMjAyMy0wMS0wOVQxNDowMCIsIjIwMjMtMDEtMDlUMTU6MDAiLCIyMDIzLTAxLTA5VDE2OjAwIiwiMjAyMy0wMS0wOVQxNzowMCIsIjIwMjMtMDEtMDlUMTg6MDAiLCIyMDIzLTAxLTA5VDE5OjAwIiwiMjAyMy0wMS0wOVQyMDowMCIsIjIwMjMtMDEtMDlUMjE6MDAiLCIyMDIzLTAxLTA5VDIyOjAwIiwiMjAyMy0wMS0wOVQyMzowMCIsIjIwMjMtMDEtMTBUMDA6MDAiLCIyMDIzLTAxLTEwVDAxOjAwIiwiMjAyMy0wMS0xMFQwMjowMCIsIjIwMjMtMDEtMTBUMDM6MDAiLCIyMDIzLTAxLTEwVDA0OjAwIiwiMjAyMy0wMS0xMFQwNTowMCIsIjIwMjMtMDEtMTBUMDY6MDAiLCIyMDIzLTAxLTEwVDA3OjAwIiwiMjAyMy0wMS0xMFQwODowMCIsIjIwMjMtMDEtMTBUMDk6MDAiLCIyMDIzLTAxLTEwVDEwOjAwIiwiMjAyMy0wMS0xMFQxMTowMCIsIjIwMjMtMDEtMTBUMTI6MDAiLCIyMDIzLTAxLTEwVDEzOjAwIiwiMjAyMy0wMS0xMFQxNDowMCIsIjIwMjMtMDEtMTBUMTU6MDAiLCIyMDIzLTAxLTEwVDE2OjAwIiwiMjAyMy0wMS0xMFQxNzowMCIsIjIwMjMtMDEtMTBUMTg6MDAiLCIyMDIzLTAxLTEwVDE5OjAwIiwiMjAyMy0wMS0xMFQyMDowMCIsIjIwMjMtMDEtMTBUMjE6MDAiLCIyMDIzLTAxLTEwVDIyOjAwIiwiMjAyMy0wMS0xMFQyMzowMCIsIjIwMjMtMDEtMTFUMDA6MDAiLCIyMDIzLTAxLTExVDAxOjAwIiwiMjAyMy0wMS0xMVQwMjowMCIsIjIwMjMtMDEtMTFUMDM6MDAiLCIyMDIzLTAxLTExVDA0OjAwIiwiMjAyMy0wMS0xMVQwNTowMCIsIjIwMjMtMDEtMTFUMDY6MDAiLCIyMDIzLTAxLTExVDA3OjAwIiwiMjAyMy0wMS0xMVQwODowMCIsIjIwMjMtMDEtMTFUMDk6MDAiLCIyMDIzLTAxLTExVDEwOjAwIiwiMjAyMy0wMS0xMVQxMTowMCIsIjIwMjMtMDEtMTFUMTI6MDAiLCIyMDIzLTAxLTExVDEzOjAwIiwiMjAyMy0wMS0xMVQxNDowMCIsIjIwMjMtMDEtMTFUMTU6MDAiLCIyMDIzLTAxLTExVDE2OjAwIiwiMjAyMy0wMS0xMVQxNzowMCIsIjIwMjMtMDEtMTFUMTg6MDAiLCIyMDIzLTAxLTExVDE5OjAwIiwiMjAyMy0wMS0xMVQyMDowMCIsIjIwMjMtMDEtMTFUMjE6MDAiLCIyMDIzLTAxLTExVDIyOjAwIiwiMjAyMy0wMS0xMVQyMzowMCIsIjIwMjMtMDEtMTJUMDA6MDAiLCIyMDIzLTAxLTEyVDAxOjAwIiwiMjAyMy0wMS0xMlQwMjowMCIsIjIwMjMtMDEtMTJUMDM6MDAiLCIyMDIzLTAxLTEyVDA0OjAwIiwiMjAyMy0wMS0xMlQwNTowMCIsIjIwMjMtMDEtMTJUMDY6MDAiLCIyMDIzLTAxLTEyVDA3OjAwIiwiMjAyMy0wMS0xMlQwODowMCIsIjIwMjMtMDEtMTJUMDk6MDAiLCIyMDIzLTAxLTEyVDEwOjAwIiwiMjAyMy0wMS0xMlQxMTowMCIsIjIwMjMtMDEtMTJUMTI6MDAiLCIyMDIzLTAxLTEyVDEzOjAwIiwiMjAyMy0wMS0xMlQxNDowMCIsIjIwMjMtMDEtMTJUMTU6MDAiLCIyMDIzLTAxLTEyVDE2OjAwIiwiMjAyMy0wMS0xMlQxNzowMCIsIjIwMjMtMDEtMTJUMTg6MDAiLCIyMDIzLTAxLTEyVDE5OjAwIiwiMjAyMy0wMS0xMlQyMDowMCIsIjIwMjMtMDEtMTJUMjE6MDAiLCIyMDIzLTAxLTEyVDIyOjAwIiwiMjAyMy0wMS0xMlQyMzowMCJdLCJ0ZW1wZXJhdHVyZV8ybSI6WzQ1LjIsNDQuMyw0NC4xLDQzLjcsNDMuMSw0Mi45LDQyLjgsNDIuMCw0Mi44LDQyLjgsNDMuNSw0NC4yLDQ1LjIsNDYuNSw0Ny45LDQ2LjksNDYuMCw0Mi4xLDQwLjIsMzkuMywzNy45LDM3LjIsMzguMSwzOC41LDM4LjUsMzcuMiwzNi4wLDM1LjMsMzMuNiwzMi44LDMyLjIsMzIuMCwzMy4yLDM2LjIsMzguMywzOS45LDM5LjksNDAuOSw0MS42LDQxLjYsMzkuOCwzOC4wLDM3LjcsMzcuNiwzNi42LDMzLjgsMzIuMiwzMS41LDMxLjIsMzEuMiwzMS4zLDMxLjEsMzEuMCwzMC45LDMwLjgsMzAuNSwzMC44LDMyLjYsMzQuMCwzNS4zLDM2LjQsMzYuNSwzOC4zLDM4LjIsMzguMCwzNy41LDM3LjYsMzguMCwzNy40LDM2LjIsMzQuNiwzNC4yLDM0LjksMzUuMiwzNS40LDM1LjcsMzUuNywzNi4xLDM3LjMsMzcuOCwzOC4xLDM4LjMsMzguNCwzOC40LDM4LjUsMzguMiwzOC4yLDM5LjQsNDAuMiw0MC4zLDQwLjUsMzkuNywzOS4wLDM3LjYsMzcuMSwzNi44LDM2LjMsMzYuMCwzNS43LDM1LjUsMzUuMywzNS4wLDM0LjksMzQuOCwzNC45LDM2LjQsMzguNCw0MC41LDQyLjUsNDQuMCw0NC44LDQ1LjAsNDQuMSw0Mi44LDQxLjgsNDEuMSw0MC44LDQwLjYsNDAuNCw0MC4xLDM5LjksMzkuOSwzOS42LDM5LjYsMzkuNSwzOS4zLDM5LjEsMzkuMCwzOS41LDQwLjQsNDEuOCw0Mi45LDQ0LjQsNDUuNiw0Ni4wLDQ1LjksNDUuNCw0NC42LDQzLjUsNDIuMCw0MS4wLDQwLjAsMzguNCwzNi45LDM1LjEsMzMuMSwzMi4xLDMxLjMsMzAuNSwyOS45LDI5LjQsMjkuMSwyOS4zLDI5LjYsMzAuNiwzMS45LDMzLjUsMzUuMiwzNi4wLDM2LjUsMzYuNiwzNi4wLDM1LjEsMzMuOSwzMy4wLDMyLjAsMzEuMCwzMC41XX0sImRhaWx5X3VuaXRzIjp7InRpbWUiOiJpc284NjAxIiwidGVtcGVyYXR1cmVfMm1fbWF4IjoiwrBGIiwidGVtcGVyYXR1cmVfMm1fbWluIjoiwrBGIn0sImRhaWx5Ijp7InRpbWUiOlsiMjAyMy0wMS0wNiIsIjIwMjMtMDEtMDciLCIyMDIzLTAxLTA4IiwiMjAyMy0wMS0wOSIsIjIwMjMtMDEtMTAiLCIyMDIzLTAxLTExIiwiMjAyMy0wMS0xMiJdLCJ0ZW1wZXJhdHVyZV8ybV9tYXgiOls0Ny45LDQxLjYsMzguMyw0MC41LDQ1LjAsNDYuMCwzNi42XSwidGVtcGVyYXR1cmVfMm1fbWluIjpbMzcuMiwzMS41LDMwLjUsMzQuOSwzNC44LDM2LjksMjkuMV19fQ==
+  recorded_at: Fri, 06 Jan 2023 23:04:11 GMT
+recorded_with: VCR 6.1.0
